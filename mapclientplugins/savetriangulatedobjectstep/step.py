@@ -47,7 +47,7 @@ class SaveTriangulatedObjectStep(WorkflowStepMountPoint):
         '''
         # Put your execute step code here before calling the '_doneExecution' method.
         
-        filename = self._config['Output directory'] + self._config['Filename']
+        filename = self._config['Output directory'] + '/' + self._config['Filename']
         
         writer = vtktools.Writer(v=self._vertices, f=self._faces)
         writer.writeSTL(filename)
